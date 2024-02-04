@@ -11,4 +11,7 @@ connDB();
 app.use(cors());
 app.use(express.json());
 app.use("/", formRouter);
+app.get("/", (req, res) => {
+	res.send("get success");
+});
 app.listen(PORT, () => console.log("server is listening", PORT));
