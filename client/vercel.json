@@ -1,4 +1,16 @@
 {
-  "version": 2,
-  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+  "routes":[
+    {
+      "src":"/",
+      "dest":"/"
+    } ,
+    {
+      "src":"/form/:id",
+      "dest":"/"
+    } ,
+    {
+      "src":"/response",
+      "dest":"/"
+    } 
+  ]
 }
