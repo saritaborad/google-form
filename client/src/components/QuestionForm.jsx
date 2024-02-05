@@ -116,7 +116,7 @@ const QuestionForm = () => {
 	function deleteQuestion(i) {
 		let qs = [...questions];
 		if (questions.length > 1) {
-			qs.slice(i, 1);
+			qs.splice(i, 1);
 		}
 		setQuestions(qs);
 	}
@@ -207,9 +207,8 @@ const QuestionForm = () => {
 			questions: questions,
 			id,
 		});
-		if (data.status === 200) {
-			navigate("/");
-		}
+
+		navigate("/");
 	}
 
 	function questionsUI() {
@@ -358,7 +357,7 @@ const QuestionForm = () => {
 														}}
 													/>
 												</div>
-												<CropOriginalIcon style={{ color: "#5f6368" }} />
+												{/* <CropOriginalIcon style={{ color: "#5f6368" }} /> */}
 												<IconButton aria-label="delete">
 													<CloseIcon
 														onClick={() => {
@@ -417,7 +416,7 @@ const QuestionForm = () => {
 
 										<div className="add_footer">
 											<div className="add_question_bottom_left">
-												<Button
+												{/* <Button
 													size="small"
 													style={{
 														textTransform: "none",
@@ -435,16 +434,16 @@ const QuestionForm = () => {
 														}}
 													/>
 													Answer key
-												</Button>
+												</Button> */}
 												<div className="add_question_bottom">
-													<IconButton
+													{/* <IconButton
 														aria-label="Copy"
 														onClick={() => {
 															copyQuestion(i);
 														}}
 													>
 														<FilterNoneIcon />
-													</IconButton>
+													</IconButton> */}
 
 													<IconButton
 														aria-label="delete"
